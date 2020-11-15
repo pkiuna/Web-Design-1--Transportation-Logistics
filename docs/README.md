@@ -11,7 +11,7 @@ This project is a WordPress implementation for the two companies Transportation 
 Built with **WordPress**.
 
 ### To Do
-- Sitemap.
+Please view the [issues](https://github.com/pkiuna/Web-Development-1--Transportation-Logistics/issues) section.
 
 ### License
 This project is not for commercial or public use. Please use your own WordPress install.
