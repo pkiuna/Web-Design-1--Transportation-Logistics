@@ -56,11 +56,12 @@ function twentytwenty_site_logo( $args = array(), $echo = true ) {
 	$args = apply_filters( 'twentytwenty_site_logo_args', $args, $defaults );
 
 	if ( has_custom_logo() ) {
-		$contents  = sprintf( $args['logo'], $logo, esc_html( $site_title ) );
+	//	$contents  = sprintf( $args['logo'], $logo, esc_html( $site_title ) ); Original, before edit to include both site icon and site title
+		$contents  = sprintf( '%1$s<a href="%3$s">%2$s</a>', $logo, esc_html( $site_title ), esc_url( get_home_url( null, '/' )) );
 		$classname = $args['logo_class'];
+		$classname = $args['title_class'];
 	} else {
 		$contents  = sprintf( $args['title'], esc_url( get_home_url( null, '/' ) ), esc_html( $site_title ) );
-		$classname = $args['title_class'];
 	}
 
 	$wrap = $args['condition'] ? 'home_wrap' : 'single_wrap';
